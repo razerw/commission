@@ -8,7 +8,7 @@ const val ERROR_DAY_LIMIT = -3
 
 fun main() {
     val cardType = "Visa" // тип карты (Mastercard, Visa, Мир)
-    val transferAmountInMonth = 500000 // сумма осуществленных переводов в месяц
+    val transferAmountInMonth = 50000 // сумма осуществленных переводов в месяц
     val transfer = 150_000 //  осуществляемый перевод
     val maxLimit = 600_000 // максимальный лимит в месяц
     val transactionLimit = 150_000 // лимит одной операции
