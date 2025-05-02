@@ -18,7 +18,7 @@ fun main() {
 
 fun moneyOrder(cardType: String, transfer: Int, maxLimit: Int, transactionLimit: Int, transferAmountInMonth: Int): Int {
     return when (cardType) {
-        "Мир" -> mirLimit(transfer, maxLimit, transactionLimit, transferAmountInMonth)
+        "Ми" -> mirLimit(transfer, maxLimit, transactionLimit, transferAmountInMonth)
         "Mastercard" -> mastercardLimitAndCommission(transfer, maxLimit, transactionLimit, transferAmountInMonth)
         "Visa" -> visaLimitCommission(transfer, maxLimit, transactionLimit, transferAmountInMonth)
         else ->
