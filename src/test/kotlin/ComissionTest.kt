@@ -1,6 +1,6 @@
 import org.junit.Test
 import ru.netology.moneyOrder
-
+import org.junit.Assert.*
 
 class ComissionTest {
     @Test
@@ -11,7 +11,8 @@ class ComissionTest {
         val maxLimit = 600_000 // максимальный лимит в месяц
         val transactionLimit = 150_000 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        // assert
+        assertEquals(-1, result)
     }
     @Test
     fun chekComission7(){
@@ -21,7 +22,7 @@ class ComissionTest {
         val maxLimit = 600_000 // максимальный лимит в месяц
         val transactionLimit = 150_000 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        assertEquals(112, result)
     }
     @Test
     fun chekComission10(){
@@ -31,7 +32,7 @@ class ComissionTest {
         val maxLimit = 600_000 // максимальный лимит в месяц
         val transactionLimit = 0 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        assertEquals(-3, result)
     }
 
     @Test
@@ -42,7 +43,7 @@ class ComissionTest {
         val maxLimit = 1_000_000 // максимальный лимит в месяц
         val transactionLimit = 150_000 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        assertEquals(-3, result)
     }
     @Test
     fun chekComission6(){
@@ -52,7 +53,7 @@ class ComissionTest {
         val maxLimit = 1_000_000 // максимальный лимит в месяц
         val transactionLimit = 150_000 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        assertEquals(-2, result)
     }
     @Test
     fun chekComission9(){
@@ -62,7 +63,7 @@ class ComissionTest {
         val maxLimit = 1_000_000 // максимальный лимит в месяц
         val transactionLimit = 150_000 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        assertEquals(0, result)
     }
     @Test
     fun chekComission3(){
@@ -72,7 +73,7 @@ class ComissionTest {
         val maxLimit = 60_000 // максимальный лимит в месяц
         val transactionLimit = 150_000 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        assertEquals(0, result)
     }
 
     @Test
@@ -83,7 +84,7 @@ class ComissionTest {
         val maxLimit = 60_000 // максимальный лимит в месяц
         val transactionLimit = 150_000 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        assertEquals(-2, result)
     }
     @Test
     fun chekComission8(){
@@ -93,7 +94,7 @@ class ComissionTest {
         val maxLimit = 60_0000 // максимальный лимит в месяц
         val transactionLimit = 150_000 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        assertEquals(26, result)
     }
 
     @Test
@@ -104,6 +105,6 @@ class ComissionTest {
         val maxLimit = 60_000 // максимальный лимит в месяц
         val transactionLimit = 150_000 // лимит одной операции
         val result = moneyOrder(cardType, transfer, maxLimit, transactionLimit, transferAmountInMonth)
-
+        assertEquals(-1, result)
     }
 }
